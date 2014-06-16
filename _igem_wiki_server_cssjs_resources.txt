@@ -1,0 +1,9 @@
+<p>iGEM CSS / JS Resources</p>
+
+CSS - <!-- ?action=raw&ctype=text/css -->
+	<link rel="stylesheet" type="text/css" href="http://2014hs.igem.org/Team:TAS_Taipei/css/bootstrap.min.css?action=raw&ctype=text/css">
+	<link rel="stylesheet" type="text/css" href="http://2014hs.igem.org/Team:TAS_Taipei/css/todc-bootstrap.min.css?action=raw&ctype=text/css">
+	<link rel="stylesheet" type="text/css" href="http://2014hs.igem.org/Team:TAS_Taipei/css/style.less?action=raw&ctype=text/css">
+
+
+JS - ?action=raw&ctype=text/javascript

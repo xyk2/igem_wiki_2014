@@ -1,0 +1,302 @@
+@font-face {
+    font-family: "Railway";
+    src: url("static/railway-webfont.woff") format('woff');
+}
+
+button:focus {outline:0 !important;}
+a:focus {outline:0 !important;}
+
+img {
+	max-width:100%;
+}
+
+a {
+	text-decoration:none;
+	color:inherit;
+}
+
+a:hover {
+	color:inherit;
+}
+
+.full {
+	padding:0;
+}
+
+
+.slidesjs-pagination {
+	margin-top: -25px;
+	margin-right: 10px;
+	z-index: 10;
+	position: relative;
+}
+
+#slides .heroImageContainer {
+	background-size: cover;
+	padding-top: 54%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	h3 {
+		opacity:0.85;
+		max-width:400px;
+		position: absolute;
+		padding: 10px 20px;
+		font-weight: normal;
+		color: white;
+		font-size: 35px;
+		font-family: Railway;
+		span {
+			font-size:21px;
+			display:block;
+		}
+	}
+	h3.topleft {
+		top: 0;
+		left: 0;
+		margin-left:20px;
+	}
+	h3.topright {
+		top:0;
+		right:5px;
+		margin-right:20px;
+	}
+	h3.bottomleft {
+		bottom: 0;
+		left: 0;
+		margin-bottom: 35px;
+		margin-left:20px;
+	}
+	h3.bottomright {
+		bottom: 0;
+		right: 5px;
+		margin-bottom: 35px;
+		margin-right:20px;
+	}
+	h3.red { background-color: rgb(209, 0, 0); }
+	h3.purple { background-color: #8e44ad; }
+	h3.blue { background-color: #2c3e50; }
+	h3.belize { background-color: #2980b9; }
+	h3.green { background-color: #27ae60; }
+	h3.orange { background-color: #f39c12; }
+	h3.hide {display:none;}
+	.slidesjs-control, .slidesjs-container {
+		width:100% !important;
+	}
+}
+
+
+nav {
+	.dropdown-menu {
+		border:0px;
+		margin-top:0px;
+		padding:10px;
+		img {
+			width:90px;
+			opacity:0.85;
+			float:left;
+		}
+		h4 {
+			color:white;
+		}
+		.subcategories_container {
+			display:inline-block;
+			width:100%;
+			cursor:pointer;
+			>div {
+				width:100%;
+				display:inline-block;
+				text-align:center;
+				border: 1px solid #494949;
+				border-bottom:none;
+			}
+			>div:last-child {
+				border-bottom:1px solid #494949;
+			}
+			h5 {
+				font-family:Railway;
+				text-transform:uppercase;
+				font-size:16px;
+				color:white;
+				text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+			}
+		}
+	}
+	li.dropdown {
+		display:inline-block;
+		margin-right: -4px;
+		padding:10px 50px;
+		a {
+			font-family:Helvetica;
+			color:white;
+			text-decoration:none;
+			font-weight:normal;
+			font-size:16px;
+			text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+		}
+	}
+
+	@human_practice: rgba(243, 156, 18, 1);
+	@modeling: rgba(39, 174, 96,1);
+	@experiments: rgba(41, 128, 185,1);
+	@safety: rgba(192, 57, 43,1);
+	@team: rgba(142, 68, 173,1);
+	@notebook: rgba(52, 73, 94,1);
+
+	li.dropdown:nth-child(1) {
+		background-color: @human_practice;
+		>.dropdown-menu {
+			background-image:url(photos/human_practice.jpg);
+			background-size:400px;
+			width:400px;
+			.subcategories_container>div {
+				background-color:fade(@human_practice, 60%);
+			}
+		}
+	}
+	li.dropdown:nth-child(2) {
+		background-color:@modeling;
+		>.dropdown-menu {
+			background-image:url(photos/modeling.jpg);
+			background-size:400px;
+			width:400px;
+			.subcategories_container>div {
+				background-color:fade(@modeling, 60%);
+			}
+		}
+	}
+
+
+	li.dropdown:nth-child(3) {
+		background-color:@experiments;
+		>.dropdown-menu {
+			background-image:url(photos/experimental.jpg);
+			background-size:400px;
+			width:400px;
+			.subcategories_container>div {
+				background-color:fade(@experiments, 60%);
+			}
+		}
+	}
+	li.dropdown:nth-child(4) {
+		background-color:@safety;
+		>.dropdown-menu {
+			background-image:url(photos/safety.jpg);
+			background-size:400px;
+			width:400px;
+			.subcategories_container>div {
+				background-color:fade(@safety, 60%);
+			}
+		}
+	}
+	li.dropdown:nth-child(5) {
+		background-color:@team;
+		>.dropdown-menu {
+			background-image:url(photos/team.jpg);
+			background-size:300px;
+			width:300px;
+			.subcategories_container>div {
+				background-color:fade(@team, 60%);
+			}
+		}
+	}
+	li.dropdown:nth-child(6) {
+		padding-right:45px;
+		background-color:@notebook;
+		>.dropdown-menu {
+			background-image:url(photos/notebook.jpg);
+			background-size:300px;
+			width:300px;
+			margin-left:-120px;
+			.subcategories_container>div {
+				background-color:fade(@notebook, 60%);
+			}
+		}
+	}
+}
+
+
+
+
+footer {
+	height:70px;
+	background-color:#2c3e50;
+	.cornered {
+		float: left;
+	    width: 300px;
+	    height: 0px;
+	    border-top: 70px solid #bdc3c7;
+	    border-right: 45px solid transparent;
+	}
+	.footer_right {
+		color:white;
+		padding:25px;
+		float: right;
+		height: 100%;
+		span {
+			opacity:0.5;
+		}
+	}
+
+}
+
+
+#bodycontainer {
+	background: url(static/cardboard_flat.jpg);
+	h1 {
+		font-family: Railway;
+		text-transform: uppercase;
+		margin: 10px 0px;
+	}
+	.igem_button {
+		position:relative;
+		h2 {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			color: rgb(221, 221, 221);
+			font-size: 16px;
+			margin: 0 auto;
+			text-align: center;
+			width: 100%;
+			padding: 5px 0px;
+			background: rgba(0, 0, 0, 0.41);
+			font-family: Railway;
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown:hover {
+	>.dropdown-menu {
+		display:block;
+	}
+}
+
+.clearfix:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
