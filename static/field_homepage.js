@@ -1,7 +1,4 @@
-// var sketch = (function() {
-  var COLORS, FRICTION, GRAVITY, MAX_FORCE, NUM_PARTICLES, Particle, TAIL_LENGTH;
-
-  
+var COLORS, FRICTION, GRAVITY, MAX_FORCE, NUM_PARTICLES, Particle, TAIL_LENGTH;
 
   TAIL_LENGTH = 8;
 
@@ -116,5 +113,3 @@ var sketchItem = Sketch.create({
       return _results;
     }
   });
-
-// })

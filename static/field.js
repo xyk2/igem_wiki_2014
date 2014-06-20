@@ -1,4 +1,3 @@
-// var sketch = (function() {
   var COLORS, FRICTION, GRAVITY, MAX_FORCE, NUM_PARTICLES, Particle, TAIL_LENGTH;
 
   NUM_PARTICLES = 550;

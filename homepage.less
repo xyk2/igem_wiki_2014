@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Railway";
-    src: url("static/railway-webfont.woff") format('woff');
+    src: url("https://github.com/GregFleming/Railway-Sans/raw/master/fonts/WebFonts/railway-webfont.woff") format('woff');
 }
 
 button:focus {outline:0 !important;}
@@ -86,6 +86,10 @@ a:hover {
 
 
 nav {
+	ul {
+		margin:0;
+		padding:0;
+	}
 	.dropdown-menu {
 		border:0px;
 		margin-top:0px;
@@ -94,9 +98,15 @@ nav {
 			width:90px;
 			opacity:0.85;
 			float:left;
+			margin-right:5px;
 		}
 		h4 {
 			color:white;
+			padding:5px;
+			margin:0;
+			font-family:Roboto;
+			font-size:16px;
+
 		}
 		.subcategories_container {
 			display:inline-block;
@@ -124,49 +134,31 @@ nav {
 	li.dropdown {
 		display:inline-block;
 		margin-right: -4px;
-		padding:10px 50px;
-		a {
-			font-family:Helvetica;
-			color:white;
+		>a {
 			text-decoration:none;
+			display:block;
+		}
+		a>h4 {
+			color:white;
 			font-weight:normal;
 			font-size:16px;
 			text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+			padding:0;
+			margin:0;
+		}
+		a>h4 {
+			padding:12px 51px;
 		}
 	}
 
 	@human_practice: rgba(243, 156, 18, 1);
-	@modeling: rgba(39, 174, 96,1);
+	@project: rgba(39, 174, 96,1);
 	@experiments: rgba(41, 128, 185,1);
 	@safety: rgba(192, 57, 43,1);
 	@team: rgba(142, 68, 173,1);
 	@notebook: rgba(52, 73, 94,1);
 
 	li.dropdown:nth-child(1) {
-		background-color: @human_practice;
-		>.dropdown-menu {
-			background-image:url(photos/human_practice.jpg);
-			background-size:400px;
-			width:400px;
-			.subcategories_container>div {
-				background-color:fade(@human_practice, 60%);
-			}
-		}
-	}
-	li.dropdown:nth-child(2) {
-		background-color:@modeling;
-		>.dropdown-menu {
-			background-image:url(photos/modeling.jpg);
-			background-size:400px;
-			width:400px;
-			.subcategories_container>div {
-				background-color:fade(@modeling, 60%);
-			}
-		}
-	}
-
-
-	li.dropdown:nth-child(3) {
 		background-color:@experiments;
 		>.dropdown-menu {
 			background-image:url(photos/experimental.jpg);
@@ -177,6 +169,31 @@ nav {
 			}
 		}
 	}
+
+	li.dropdown:nth-child(2) {
+		background-color:@project;
+		>.dropdown-menu {
+			background-image:url(photos/modeling.jpg);
+			background-size:400px;
+			width:400px;
+			.subcategories_container>div {
+				background-color:fade(@project, 60%);
+			}
+		}
+	}
+
+	li.dropdown:nth-child(3) {
+		background-color: @human_practice;
+		>.dropdown-menu {
+			background-image:url(photos/human_practice.jpg);
+			background-size:400px;
+			width:400px;
+			.subcategories_container>div {
+				background-color:fade(@human_practice, 60%);
+			}
+		}
+	}
+
 	li.dropdown:nth-child(4) {
 		background-color:@safety;
 		>.dropdown-menu {
@@ -200,7 +217,6 @@ nav {
 		}
 	}
 	li.dropdown:nth-child(6) {
-		padding-right:45px;
 		background-color:@notebook;
 		>.dropdown-menu {
 			background-image:url(photos/notebook.jpg);
@@ -241,30 +257,102 @@ footer {
 
 
 #bodycontainer {
+	padding:10px 0;
+	@text_color: rgb(221, 221, 221);
 	background: url(static/cardboard_flat.jpg);
-	h1 {
+	.overview_header {
+		text-align:center;
+	}
+	h1, h2, h3, h4, h5 {
 		font-family: Railway;
 		text-transform: uppercase;
 		margin: 10px 0px;
 	}
+	.buttonrow {
+		margin-bottom:20px;
+	}
 	.igem_button {
 		position:relative;
-		h2 {
+		overflow: hidden;
+		img {
+			transition: 0.4s ease;
+			-webkit-filter: grayscale(0%);
+		}
+		.button_description {
+			transition: 0.5s ease;
+			background: rgba(44, 62, 80, 0.75);			
 			position: absolute;
-			bottom: 0;
+			top: 100%;
 			left: 0;
-			color: rgb(221, 221, 221);
+			width: 100%;
+			height:100%;
+		}
+		h2 {
+			margin: 0 auto;			
+			margin-top:-27px;
+			color: @text_color;
 			font-size: 16px;
-			margin: 0 auto;
 			text-align: center;
 			width: 100%;
 			padding: 5px 0px;
 			background: rgba(0, 0, 0, 0.41);
 			font-family: Railway;
 			text-transform: uppercase;
+			border-bottom:1px solid rgba(255, 255, 255, 0.3);
+		}
+		p {
+			color:@text_color;
+			padding:5px;
+		}
+	}
+	.igem_button:hover {
+		>.button_description {
+			top:27px;
+		}
+		>img {
+			-webkit-filter: grayscale(100%);
 		}
 	}
 
+
+
+	.red h2 { background: rgb(209, 0, 0); }
+	.purple h2 { background: #8e44ad; }
+	.blue h2 { background: #2c3e50; }
+	.belize h2 { background: #2980b9; }
+	.green h2 { background: #27ae60; }
+	.orange h2 { background: #f39c12; }
+}
+
+
+#category_navbar {
+	color: black;
+	padding-left:0;
+	padding: 5px;
+	.active {
+		background: rgba(255, 156, 0, 0.17);
+		border: 1px solid rgba(0, 0, 0, 0.17);
+	}
+	.nav>li>a {
+		text-transform:uppercase;
+		font-size: 20px;
+		font-family: Railway;
+	}
+	.nav ul li {
+		a {
+			font-size:14px;
+		}
+		list-style-type: none;
+		display: block;
+		color: inherit;
+		border:0;
+		margin-left: 10px;
+		padding-top:4px;
+		padding-bottom:4px;
+	}
+	.nav ul li:hover {
+		background: rgba(255, 255, 255, 0.5);
+	}
 }
 
 
@@ -272,16 +360,21 @@ footer {
 
 
 
+.affix {
+	top:30px;
+}
+
+
+p {
+	font-family: Roboto;
+	font-size: 15px;
+}
 
 
 
-
-
-
-
-
-
-
+.col-lg-offset-1half {
+	margin-left: 11.111111111111%;
+}
 
 
 
